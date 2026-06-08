@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Controle Financeiro Pessoal</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo-transp.png" alt="Logo">
+        </div>
+        <div class="receita"> 
+            <h3> Receita </h3>
+            <button type="button" id="receita"> <i class="fa-solid fa-plus"></i> </button>
+        </div>
+    </header>
+   <!-- Modal (invisível por padrão) -->
+    <div id="modal" class="modal">
+    <div class="modal-content">
+        <h3>Digite o valor da receita:</h3>
+        <input type="number" id="valorReceita" placeholder="Ex: 1500.00">
+        <button id="confirmarReceita">Confirmar</button>
+    </div>
+    </div>
+
+    <hr>
+
+    <main class="container">
+        <ul class="gastos">
+        
+        </ul>
+        <button type="button" id="mais"> <i class="fa-solid fa-plus"></i> </button>
+    </main>
+
+    <!-- Modal de gasto -->
+    <div id="modal-gasto" class="modal">
+    <div class="modal-content">
+        <h3>Novo Gasto</h3>
+        <input type="text" id="descricaoGasto" placeholder="Descrição">
+        <input type="date" id="dataGasto">
+        <input type="number" id="valorGasto" placeholder="Valor">
+        <button id="confirmarGasto">Adicionar</button>
+    </div>
+    </div>
+
+
+    <footer>
+        <div>
+            <h3> Previsto </h3>
+            <input type="text" id="previsto" readonly>
+        </div>
+        <div>
+            <h3> Efetivado </h3>
+            <input type="text" id="efetivado" readonly>
+        </div>
+        <div>
+            <h3> Saldo </h3>
+            <input type="text" id="saldo" readonly>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

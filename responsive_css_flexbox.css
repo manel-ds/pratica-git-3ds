@@ -1,0 +1,137 @@
+/* RESET GERAL */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+header .logo,
+header .receita {
+  flex: 1 1 45%; /* flex-grow, flex-shrink, flex-basis */
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+header .logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+header .receita {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#receita {
+  width: 100%;
+  max-width: 200px;
+  height: 2.5rem;
+  background-color: #00cec9;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#receita .fa-plus {
+  font-size: 1.5rem;
+}
+
+hr {
+  width: 90%;
+  border: 1px solid #636e72;
+  margin: 0.5rem auto;
+}
+
+/* MAIN */
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+#mais {
+  width: 100%;
+  max-width: 300px;
+  height: 2.5rem;
+  background-color: #00cec9;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+#mais .fa-plus {
+  font-size: 1.5rem;
+}
+
+.gastos {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  gap: 0.5rem;
+}
+
+footer div {
+  flex: 1 1 30%;
+  min-width: 100px;
+  text-align: center;
+}
+
+footer input {
+  width: 100%;
+  max-width: 100px;
+  text-align: center;
+  margin-top: 0.5rem;
+  padding: 0.3rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* RESPONSIVO */
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+}

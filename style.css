@@ -1,0 +1,166 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+  background-color: #5d668e;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+header {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between; /* Espaço distribuído uniformemente entre logo e botão de receita */
+  align-items: center;  /* Alinhamento na vertical centralizado */
+  padding: 0.5rem 1rem; /* espaço interno na vertical de 0.5 e na horizontal de 1
+  gap: 1rem; /* gap é o espaçamento entre os elementos filhos */
+}
+
+/* flex: grow, shrink, basis
+   - 1 -> Cresce para ocupar espaço disponível
+   - 1 -> Encolhe se precisar
+   - 0 -> Começa com base 0 (divide igualmente com os outros) */
+header .logo, header .receita {
+  flex: 1 1 0;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .logo img {
+  max-width: 100%;
+  max-width: 90px; /* Limita o tamanho da logo */ 
+  height: auto;
+}
+
+/* Parte importante: estrutura vertical interna da receita */
+header .receita {
+  flex-direction: column;  /* título em cima, botão embaixo */
+  gap: 0.5rem;
+}
+
+#receita {
+  width: 100%;
+  max-width: 130px; /* Limita o tamanho do botão */ 
+  height: 2.5rem;
+  background-color: #00cec9;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#receita .fa-plus {
+  font-size: 1.3rem;
+}
+
+/* Modal: fundo escuro transparente */
+.modal {
+  display: none; /* começa invisível */
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* fundo escuro */
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Conteúdo da modal da Receita */
+.modal-content {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  width: 80%;
+  max-width: 300px;
+}
+.modal-content input {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 1rem 0;
+}
+.modal-content button {
+  background-color: #00cec9;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+hr{
+    width: 100%;
+    border: 1px solid #636e72;
+    margin-top:5px;
+    margin-bottom: 5px;
+}
+.container{
+    text-align: center;
+}
+#mais{
+    width: 80%;
+    height: 2.3rem;
+    background-color:   #00cec9;
+    border: solid  1px #00cec9;
+    cursor: pointer;
+    border-radius: 15px;
+}
+#mais .fa-plus{
+      background-color: aquamarine;
+    font-size: x-large;
+    padding: 4px;
+    border-radius: 10px;
+}
+
+.modal-content input {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+footer div {
+  flex: 1 1 0;
+  text-align: center;
+}
+
+footer h3 {
+  font-size: 0.9rem;
+  color: #2d3436;
+  margin-bottom: 0.3rem;
+}
+
+footer input {
+  width: 80%;
+  max-width: 100px;
+  text-align: center;
+  padding: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: #f1f2f6;
+}
